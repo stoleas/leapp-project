@@ -38,10 +38,11 @@
           - cockpit-system
           - cockpit-leapp
           - vdo
-#      when:
-#        - ansible_system_vendor == "Amazon EC2" or ansible_system_vendor == "Xen"
-#        - ansible_product_uuid|regex_search('^ec2') or ansible_product_uuid|regex_search('^EC2')
-#        - "'rhui' in yum_repolist.stdout"
+      when:
+        - ansible_system_vendor == "Amazon EC2" or ansible_system_vendor == "Xen"
+        - ansible_product_uuid|regex_search('^ec2') or ansible_product_uuid|regex_search('^EC2')
+        - "'rhui' in yum_repolist.stdout"
+
   roles:
     - infra.leapp.analysis
   tasks:
