@@ -1,6 +1,6 @@
 ---
 - name: Create/revert/remove/check LVM snapshots of node
-  hosts: "{{ rhel_inventory_group | default(omit) }}"
+  hosts: rhel7
   become: yes
   environment:
     LANG: en_US.UTF-8
