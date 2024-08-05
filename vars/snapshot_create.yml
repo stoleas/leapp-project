@@ -1,3 +1,4 @@
 ---
 snapshot_set_name: "myRipu"
+lvm_snapshots_action: "create"
 
