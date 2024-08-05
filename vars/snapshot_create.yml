@@ -1,4 +1,19 @@
 ---
 snapshot_set_name: "myRipu"
 lvm_snapshots_action: "create"
-
+snapshot_create_snapshot_autoextend_threshold: "70"
+snapshot_create_snapshot_autoextend_percent: "20"
+snapshot_create_boot_backup: true
+snapshot_create_volumes:
+  - vg: VolGroup00
+    lv: rootVol
+    size: 4G
+  - vg: VolGroup00
+    lv: varVol
+    size: 5G
+  - vg: VolGroup00
+    lv: logVol
+    size: 500M
+  - vg: VolGroup00
+    lv: auditVol
+    size: 100M
