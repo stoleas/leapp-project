@@ -1,0 +1,3 @@
+snapshot_set_name: myRipu
+snapshot_create_boot_backup: true
+lvm_snapshots_action: revert
